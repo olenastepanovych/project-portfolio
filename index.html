@@ -2,127 +2,1188 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vanilla-app-template/favicon.svg" />
+    <link rel="icon" type="image/svg+xml" href="/commandf113-project-portfolio/assets/favicon-DcBtz0py.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vanilla App Template</title>
-    <script type="module" crossorigin src="/vanilla-app-template/index.js"></script>
-    <link rel="stylesheet" crossorigin href="/vanilla-app-template/assets/styles-DvPDDfy5.css">
+    <title>Portfolio</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/3.0.1/modern-normalize.min.css"
+      integrity="sha512-q6WgHqiHlKyOqslT/lgBgodhd03Wp4BEqKeW6nNtlOY4quzyG3VoQKFrieaCeSnuVseNKRGpGeDU3qPmabCANg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script type="module" crossorigin src="/commandf113-project-portfolio/index.js"></script>
+    <link rel="modulepreload" crossorigin href="/commandf113-project-portfolio/assets/vendor-DhQbD4Aq.js">
+    <link rel="stylesheet" crossorigin href="/commandf113-project-portfolio/assets/vendor-L2OQvYJV.css">
+    <link rel="stylesheet" crossorigin href="/commandf113-project-portfolio/assets/index-BwblNHUV.css">
   </head>
   <body>
-    <header class="header">
-  <div class="container">
-    <nav class="nav">
-      <a class="nav-logo" href="./index.html" aria-label="Site logo">
-        <svg class="nav-logo-icon" width="100" height="30">
-          <use href="/vanilla-app-template/assets/sprite-E8vg0sBb.svg#logo"></use>
-        </svg>
-      </a>
-      <ul class="nav-list">
-        <li class="nav-item">
-          <a class="nav-link {=$highlight-act}" href="./page-2.html">Page 2</a>
+    <header class="header" id="header">
+  <div class="header__container container">
+    <a class="header__logo" href="./index.html" aria-label="Go to homepage">
+      <img
+        class="header__logo-image"
+        srcset="/commandf113-project-portfolio/assets/logo-photo-1x-C5oUbibY.png 1x, /commandf113-project-portfolio/assets/logo-photo-2x-7f3AKADV.png 2x"
+        alt="Logo Jefferson"
+        width="80"
+        height="80"
+      />
+      <p class="header__logo-text">jefferson*</p>
+    </a>
+    <nav class="header__nav header__nav--hidden">
+      <button
+        class="header__menu-button"
+        type="button"
+        aria-expanded="false"
+        aria-controls="header__nav-list"
+      >
+        Menu
+      </button>
+      <ul id="header__nav-list" class="header__nav-list">
+        <li class="header__nav-item">
+          <a class="header__nav-link" href="#about-me">About me</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link {=$highlight-curr}" href="./page-3.html">Page 3</a>
+        <li class="header__nav-item">
+          <a class="header__nav-link" href="#benefits">Benefits</a>
+        </li>
+        <li class="header__nav-item">
+          <a class="header__nav-link" href="#projects">Projects</a>
+        </li>
+        <li class="header__nav-item">
+          <a class="header__nav-link" href="#faq">FAQ</a>
         </li>
       </ul>
     </nav>
+    <a class="header__order-button" href="#work-together">Order the project</a>
+
+    <button
+      class="header__mobile-menu-button"
+      type="button"
+      aria-label="Open mobile menu"
+      data-menu-open
+    >
+      <div class="brg-wrapper">
+        <sprite class="brg"></sprite>
+        <sprite class="brg"></sprite>
+      </div>
+    </button>
   </div>
 </header>
 
-
-    <main>
-      <!-- Loads the specified .html file -->
-      <section class="vite-promo">
-  <div class="container">
-    <div class="vite-promo-thumb">
-      <a
-        class="vite-promo-link"
-        href="https://vitejs.dev/"
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label="Link to Vite official website"
-        title="Vite.js  build tool"
-      >
-        <!-- Path to images as from index.html file -->
-        <img
-          class="pic"
-          src="/vanilla-app-template/assets/vite-logo-9o_aqrTe.png"
-          alt="Vite logo"
-          width="640"
-          height="640"
-        />
-      </a>
-    </div>
-    <h1 class="main-title">
-      <span class="main-title-gradient">Vite</span>
-      Template by
-      <a
-        class="main-title-link"
-        href="https://github.com/goitacademy/vanilla-app-template"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        GoIT
-      </a>
-    </h1>
-  </div>
-</section>
-
-      <article class="badges">
-  <div class="container">
-    <ul class="badges-list">
-      <li class="badges-item">
-        <a
-          class="badges-link"
-          href="https://www.npmjs.com/package/vite-plugin-html-inject"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          HTML Inject
-        </a>
+<div class="header__mobile-menu-container">
+  <button
+    class="header__mobile-menu-close-button"
+    aria-label="Mobile menu close"
+  >
+    <svg class="header__mobile-menu-close-icon" width="32" height="32">
+      <use href="/commandf113-project-portfolio/assets/icons-B064d_8q.svg#x"></use>
+    </svg>
+  </button>
+  <nav class="header__mobile-nav">
+    <ul class="header__mobile-nav-list">
+      <li class="header__mobile-nav-item">
+        <a class="header__mobile-nav-link" href="#about-me">About me</a>
       </li>
-      <li class="badges-item">
-        <a
-          class="badges-link"
-          href="https://www.npmjs.com/package/vite-plugin-full-reload"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Full Reload
-        </a>
+      <li class="header__mobile-nav-item">
+        <a class="header__mobile-nav-link" href="#benefits">Benefits</a>
       </li>
-      <li class="badges-item">
-        <a
-          class="badges-link"
-          href="https://www.npmjs.com/package/postcss-sort-media-queries"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Sort Media Queries
-        </a>
+      <li class="header__mobile-nav-item">
+        <a class="header__mobile-nav-link" href="#projects">Projects</a>
+      </li>
+      <li class="header__mobile-nav-item">
+        <a class="header__mobile-nav-link" href="#faq">FAQ</a>
       </li>
     </ul>
-  </div>
-</article>
+  </nav>
+  <a class="header__mobile-order-button" href="#work-together">
+    Order the project
+  </a>
+</div>
 
+
+    <main>
+      <section class="hero" id="hero">
+    <div class="hero-section">
+    <div class="hero-container">
+        <h1 class="hero-title">Hello.</br>
+            I'm Fullstack developer</br>
+            Lloyd Jefferson.</h1>
+        <ul class="hero-soc-networks">
+            <li><a class="hero-soc-network" 
+href="https://www.instagram.com/goitclub/" target="_blank">IG</a></li>
+            <li><a class="hero-soc-network" 
+href="https://www.youtube.com/c/GoIT" target="_blank">YT</a></li>
+            <li><a class="hero-soc-network" 
+href="https://www.facebook.com/goITclub/" target="_blank">FB</a></li>
+            <li><a class="hero-soc-network" 
+href="https://github.com/irina8660/command-project-portfolio" 
+target="_blank">GH</a></li>
+            <li><a class="hero-soc-email" 
+href="mailto:lloydjefferson@gmail.com" 
+target="_blank">lloydjefferson@gmail.com</a></li>
+        </ul>
+    </div>
+    </div>
+</section>
+
+
+
+      <section class="about-me" id="about-me">
+    <div class="container about-me__container">
+    <h2 class="about-me__title visually-hidden">About me</h2>
+    <div class="about-me__description-wrapper">
+        <div class="about-me__description">
+        <p class="about-me__description-text">
+            I work with people all over the world to create impressive and
+            <span class="accent-red-text">functional</span>
+            <span class="accent-gray-text">websites</span> that reflect each
+            client's unique personality.
+        </p>
+        </div>
+        <picture class="about-me__picture">
+        <source
+            srcset="/commandf113-project-portfolio/assets/me_desk@1x-LaBclWlj.webp 1x, /commandf113-project-portfolio/assets/me_desk@2x-oNeX5CM1.webp 2x"
+            media="(min-width: 1440px)"
+        />
+        <source
+            srcset="/commandf113-project-portfolio/assets/me_tab@1x-SjcUOzES.webp 1x, /commandf113-project-portfolio/assets/me_tab@2x-W8g8_3x8.webp 2x"
+            media="(min-width: 768px)"
+        />
+        <source
+            srcset="/commandf113-project-portfolio/assets/me_mob@1x-BDJY0j7r.webp 1x, /commandf113-project-portfolio/assets/me_mob@2x-DO_GgtTU.webp 2x"
+            media="(max-width: 767px)"
+        />
+        <img
+            class="about-me__image"
+            src="/commandf113-project-portfolio/assets/me_mob@1x-BDJY0j7r.webp"
+            alt="Portrait of [Lloyd]"
+        />
+        </picture>
+    </div>
+
+    <div class="about-me__content">
+        <ul class="about-me__list">
+        <li class="about-me__item">
+            <div class="about-me__inner">
+            <h3 class="about-me__subtitle">About me</h3>
+            <div
+                class="about-me__button"
+                aria-expanded="false"
+                aria-label="Open about me"
+            >
+                <svg
+                class="about-me__icon about-me__icon-rotate"
+                width="18"
+                height="18"
+                aria-hidden="true"
+                >
+                <use href="/commandf113-project-portfolio/assets/icons-B064d_8q.svg#icon-arrow-up"></use>
+                </svg>
+            </div>
+            </div>
+            <ul class="about-me__details">
+            <li class="about-me__detail">
+                <p class="about-me__text">
+                I am Lloyd Jefferson, a talented programmer with extensive
+                expertise in software development. I have an understanding of
+                different programming languages and technologies, always ready
+                to improve my skills. I always follow the latest trends and look
+                for unconventional, creative solutions to problems. I have a
+                high level of analytical skills and am able to effectively solve
+                even the most difficult tasks encountered on the way.
+                </p>
+            </li>
+            <li class="about-me__detail">
+                <p class="about-me__text">
+                Able to work both independently and in a team. I can effectively
+                cooperate with colleagues, exchanging ideas and finding optimal
+                solutions. Professional maturity allows you to calmly cope with
+                challenges and stressful situations, while maintaining a high
+                quality of work. I am always looking for opportunities for
+                self-improvement. I actively study new technologies and
+                practices to stay abreast of the latest innovations. I have a
+                strong understanding of various programming languages,
+                frameworks and architectural concepts that allow me to create
+                efficient and scalable software.
+                </p>
+            </li>
+            </ul>
+        </li>
+        <li class="about-me__item">
+            <div class="about-me__inner">
+            <h3 class="about-me__subtitle">Role</h3>
+            <div
+                class="about-me__button"
+                aria-expanded="false"
+                aria-label="Role"
+            >
+                <svg
+                class="about-me__icon"
+                width="18"
+                height="18"
+                aria-hidden="true"
+                >
+                <use href="/commandf113-project-portfolio/assets/icons-B064d_8q.svg#icon-arrow-up"></use>
+                </svg>
+            </div>
+            </div>
+            <ul class="about-me__details">
+            <li class="about-me__detail">
+                <p class="about-me__text">Frontend development</p>
+            </li>
+            <li class="about-me__detail">
+                <p class="about-me__text">HeadlessCMS, Wordpress</p>
+            </li>
+            <li class="about-me__detail">
+                <p class="about-me__text">Blender (enjoy)</p>
+            </li>
+            </ul>
+        </li>
+        <li class="about-me__item">
+            <div class="about-me__inner">
+            <h3 class="about-me__subtitle">Education</h3>
+            <div
+                class="about-me__button"
+                aria-expanded="false"
+                aria-label="Education"
+            >
+                <svg class="about-me__icon" width="5" height="10">
+                <use href="/commandf113-project-portfolio/assets/icons-B064d_8q.svg#icon-arrow-up"></use>
+                </svg>
+            </div>
+            </div>
+            <ul class="about-me__details">
+            <li class="about-me__detail">
+                <p class="about-me__text">
+                2018 - 2019 / Frontend Development Diploma,<br />
+                GoIT IT School, New York
+                </p>
+            </li>
+            <li class="about-me__detail">
+                <p class="about-me__text">
+                2019 - 2020 / Advanced Web Development Certificate,<br />
+                GoIT IT School, New York
+                </p>
+            </li>
+            <li class="about-me__detail">
+                <p class="about-me__text">
+                2020 - 2022 / Advanced Blender Animation Techniques, Udemy
+                </p>
+            </li>
+            </ul>
+        </li>
+        </ul>
+    </div>
+
+    <div class="about-me__skills-wrapper">
+        <div class="swiper about-me__skills">
+        <ul class="swiper-wrapper about-me__skills-list">
+            <li class="swiper-slide about-me__skill-item active">HTML/CSS</li>
+            <li class="swiper-slide about-me__skill-item">JavaScript</li>
+            <li class="swiper-slide about-me__skill-item">Node.js</li>
+            <li class="swiper-slide about-me__skill-item">React</li>
+            <li class="swiper-slide about-me__skill-item">React Native</li>
+            <li class="swiper-slide about-me__skill-item">TypeScript</li>
+            <li class="swiper-slide about-me__skill-item active">HTML/CSS</li>
+            <li class="swiper-slide about-me__skill-item">JavaScript</li>
+            <li class="swiper-slide about-me__skill-item">Node.js</li>
+            <li class="swiper-slide about-me__skill-item">React</li>
+            <li class="swiper-slide about-me__skill-item">React Native</li>
+            <li class="swiper-slide about-me__skill-item">TypeScript</li>
+        </ul>
+        <div class="about-me__skills-button-next" aria-label="Next slide">
+            <svg class="about-me__skills-arrow" width="30" height="30">
+            <use href="/commandf113-project-portfolio/assets/icons-B064d_8q.svg#icon-arrow-left"></use>
+            </svg>
+        </div>
+        </div>
+    </div>
+    </div>
+</section>
+      <section class="benefits" id="benefits">
+    <div class="container grid-container">
+    <h2 class="benefits-title">Benefits of working with me</h2>
+    <ul class="benefits-list">
+        <li class="benefits-list-item">
+        <div class="benefits-icon-box">
+            <svg class="benefits-icon" width="24" height="24">
+            <use href="/commandf113-project-portfolio/assets/icons-B064d_8q.svg#icon-user"></use>
+            </svg>
+        </div>
+        <h3 class="benefits-subtitle">Expertise</h3>
+        <p class="benefits-descr">
+            As a highly experienced developer, I have deep knowledge of
+            programming and website development.
+        </p>
+        </li>
+        <li class="benefits-list-item">
+        <div class="benefits-icon-box">
+            <svg class="benefits-icon" width="24" height="24">
+            <use href="/commandf113-project-portfolio/assets/icons-B064d_8q.svg#icon-message-chat"></use>
+            </svg>
+        </div>
+        <h3 class="benefits-subtitle">Communication</h3>
+        <p class="benefits-descr">
+            Understanding your needs and wants is my priority and I am always open
+            to discussions and corrections.
+        </p>
+        </li>
+        <li class="benefits-list-item">
+        <div class="benefits-icon-box">
+            <svg class="benefits-icon" width="24" height="24">
+            <use href="/commandf113-project-portfolio/assets/icons-B064d_8q.svg#icon-brush"></use>
+            </svg>
+        </div>
+        <h3 class="benefits-subtitle">Art</h3>
+        <p class="benefits-descr">
+            Thanks to my creative nature, I am ready to accept challenges and help
+            you bring your ideas to life.
+        </p>
+        </li>
+        <li class="benefits-list-item">
+        <div class="benefits-icon-box">
+            <svg class="benefits-icon" width="24" height="24">
+            <use href="/commandf113-project-portfolio/assets/icons-B064d_8q.svg#icon-hourglass"></use>
+            </svg>
+        </div>
+        <h3 class="benefits-subtitle">Urgent execution</h3>
+        <p class="benefits-descr">
+            I understand how important time is to you. Ready to work quickly and
+            efficiently, without reducing the quality of work.
+        </p>
+        </li>
+    </ul>
+    <a href="#work-together" class="benefits-link">Order the project</a>
+    </div>
+</section>
+      <section class="projects" id="projects">
+    <div class="container projects-section">
+    <h2 class="projects-title">Projects</h2>
+    <div class="projects-container swiper">
+        <ul class="projects-list swiper-wrapper">
+        <li class="project-item swiper-slide">
+            <div class="project-content">
+            <ul class="project-tags-list">
+                <li class="project-tags-item">#react</li>
+                <li class="project-tags-item">#js</li>
+                <li class="project-tags-item">#node js</li>
+                <li class="project-tags-item">#git</li>
+            </ul>
+            <h3 class="project-subtitle">
+                Programming Across Borders: Ideas, Technologies, Innovations
+            </h3>
+            <a
+                class="project-link"
+                href="https://github.com/irina8660/command-project-portfolio"
+                target="_blank"
+                rel="noopener noreferrer"
+                >See project</a
+            >
+            </div>
+
+            <div class="project-image-container">
+            <picture>
+                <source
+                srcset="/commandf113-project-portfolio/assets/proj-tab-1--p1yDtW2.webp 1x, /commandf113-project-portfolio/assets/proj-tab-1@2-BLihD1Rv.webp 2x"
+                media="(min-width: 768px)"
+                type="image/webp"
+                />
+                <source
+                media="(min-width: 768px)"
+                srcset="/commandf113-project-portfolio/assets/proj-tab-1-BFsupD5B.jpg 1x, /commandf113-project-portfolio/assets/proj-tab-1@2-BusAPe1z.jpg 2x"
+                />
+                <source
+                srcset="/commandf113-project-portfolio/assets/proj-mob-1-B8BOWZNx.webp 1x, /commandf113-project-portfolio/assets/proj-mob-1@2-BBjZpGXP.webp 2x"
+                media="(min-width: 768px)"
+                type="image/webp"
+                />
+                <source
+                media="(max-width: 767px)"
+                srcset="/commandf113-project-portfolio/assets/proj-mob-1-7e8Ytx5P.jpg 1x, /commandf113-project-portfolio/assets/proj-mob-1@2-Dqnf2iLL.jpg 2x"
+                />
+                <img
+                src="/commandf113-project-portfolio/assets/proj-tab-1-BFsupD5B.jpg"
+                alt="Book search program"
+                width="614"
+                />
+            </picture>
+            </div>
+        </li>
+        <li class="project-item swiper-slide">
+            <div class="project-content">
+            <ul class="project-tags-list">
+                <li class="project-tags-item">#react</li>
+                <li class="project-tags-item">#js</li>
+                <li class="project-tags-item">#node js</li>
+                <li class="project-tags-item">#git</li>
+            </ul>
+            <h3 class="project-subtitle">
+                Programming Across Borders: Ideas, Technologies, Innovations
+            </h3>
+            <a
+                class="project-link"
+                href="https://github.com/irina8660/command-project-portfolio"
+                target="_blank"
+                rel="noopener noreferrer"
+                >See project</a
+            >
+            </div>
+
+            <div class="project-image-container">
+            <picture>
+                <source
+                srcset="/commandf113-project-portfolio/assets/proj-tab-2-B-4tUynM.webp 1x, /commandf113-project-portfolio/assets/proj-tab-2@2-D8gAccxC.webp 2x"
+                media="(min-width: 768px)"
+                type="image/webp"
+                />
+                <source
+                media="(min-width: 768px)"
+                srcset="/commandf113-project-portfolio/assets/proj-tab-2-DTYahjZu.jpg 1x, /commandf113-project-portfolio/assets/proj-tab-2@2-H_SC1XrE.jpg 2x"
+                />
+                <source
+                srcset="/commandf113-project-portfolio/assets/proj-mob-2-yMI9Nxbn.webp 1x, /commandf113-project-portfolio/assets/proj-mob-2@2-Dl8ovxzo.webp 2x"
+                media="(min-width: 768px)"
+                type="image/webp"
+                />
+                <source
+                media="(max-width: 767px)"
+                srcset="/commandf113-project-portfolio/assets/proj-mob-2-COTclMJK.jpg 1x, /commandf113-project-portfolio/assets/proj-mob-2@2-KUrxT9e0.jpg 2x"
+                />
+                <img
+                src="/commandf113-project-portfolio/assets/proj-tab-2-DTYahjZu.jpg"
+                alt="Project petlove. A girl and a boy look into a dog's ear"
+                width="614"
+                />
+            </picture>
+            </div>
+        </li>
+        <li class="project-item swiper-slide">
+            <div class="project-content">
+            <ul class="project-tags-list">
+                <li class="project-tags-item">#react</li>
+                <li class="project-tags-item">#js</li>
+                <li class="project-tags-item">#node js</li>
+                <li class="project-tags-item">#git</li>
+            </ul>
+            <h3 class="project-subtitle">
+                Programming Across Borders: Ideas, Technologies, Innovations
+            </h3>
+            <a
+                class="project-link"
+                href="https://github.com/irina8660/command-project-portfolio"
+                target="_blank"
+                rel="noopener noreferrer"
+                >See project</a
+            >
+            </div>
+
+            <div class="project-image-container">
+            <picture>
+                <source
+                srcset="/commandf113-project-portfolio/assets/proj-tab-3-CJTzClUt.webp 1x, /commandf113-project-portfolio/assets/proj-tab-3@2-D5x7HzX5.webp 2x"
+                media="(min-width: 768px)"
+                type="image/webp"
+                />
+                <source
+                media="(min-width: 768px)"
+                srcset="/commandf113-project-portfolio/assets/proj-tab-3-BOmxcDv5.jpg 1x, /commandf113-project-portfolio/assets/proj-tab-3@2-K3dJLL0z.jpg 2x"
+                />
+                <source
+                srcset="/commandf113-project-portfolio/assets/proj-mob-3-ChupqDXQ.webp 1x, /commandf113-project-portfolio/assets/proj-mob-3@2-Own2nzKn.webp 2x"
+                media="(min-width: 768px)"
+                type="image/webp"
+                />
+                <source
+                media="(max-width: 767px)"
+                srcset="/commandf113-project-portfolio/assets/proj-mob-3-vy7VOI3k.jpg 1x, /commandf113-project-portfolio/assets/proj-mob-3@2-lmDzcI77.jpg 2x"
+                />
+                <img
+                src="/commandf113-project-portfolio/assets/proj-tab-3-BOmxcDv5.jpg"
+                alt="VocabBuilder. Registration form"
+                width="614"
+                />
+            </picture>
+            </div>
+        </li>
+        </ul>
+
+        <div class="swiper-button-prev">
+        <svg class="left-svg" width="32" height="32">
+            <use href="/commandf113-project-portfolio/assets/icons-B064d_8q.svg#icon-arrow-left"></use>
+        </svg>
+        </div>
+        <div class="swiper-button-next">
+        <svg class="right-svg" width="32" height="32">
+            <use href="/commandf113-project-portfolio/assets/icons-B064d_8q.svg#icon-arrow-left"></use>
+        </svg>
+        </div>
+    </div>
+    </div>
+</section>
+      <section class="" id="faq">
+    <div class="container">
+    <h2 class="title-faq">FAQ</h2>
+    <ul class="questions">
+        <li class="question-group">
+        <div class="question-arrow">
+            <p class="question">
+            What programming languages ​are most often used in your project?
+            </p>
+            <div class="svg-icon-group">
+            <div class="arrow-mob-up-svg-link">
+                <svg class="arrow-icon" width="5" height="10">
+                <use href="/commandf113-project-portfolio/assets/icons-B064d_8q.svg#icon-arrow-up" />
+                </svg>
+            </div>
+            </div>
+        </div>
+        <p class="answer">
+            In the field of web development, there are various technologies and
+            programming languages. Typically, this includes a combination of
+            frontend (client side) and backend (server side) languages.
+        </p>
+        </li>
+        <li class="question-group">
+        <div class="question-arrow">
+            <p class="question">What are the deadlines for the project?</p>
+            <div class="svg-icon-group">
+            <div class="arrow-mob-up-svg-link">
+                <svg class="arrow-icon" width="5" height="10">
+                <use href="/commandf113-project-portfolio/assets/icons-B064d_8q.svg#icon-arrow-up" />
+                </svg>
+            </div>
+            </div>
+        </div>
+        <p class="answer">
+            The terms of project implementation depend to a large extent on a
+            number of factors, such as the scope of the project, its complexity,
+            and the availability of resources. Determining exact deadlines is a
+            difficult task, and it usually occurs during the planning phase of the
+            project.
+        </p>
+        </li>
+        <li class="question-group">
+        <div class="question-arrow">
+            <p class="question">What payment methods do you accept?</p>
+            <div class="svg-icon-group">
+            <div class="arrow-mob-up-svg-link">
+                <svg class="arrow-icon" width="5" height="10">
+                <use href="/commandf113-project-portfolio/assets/icons-B064d_8q.svg#icon-arrow-up" />
+                </svg>
+            </div>
+            </div>
+        </div>
+        <p class="answer">
+            Payment through credit and debit cards such as Visa, MasterCard,
+            specialized electronic payment systems such as PayPal, as well as
+            payments in cryptocurrencies such as Bitcoin, Ethereum and others.
+        </p>
+        </li>
+        <li class="question-group">
+        <div class="question-arrow">
+            <p class="question">How can I contact you?</p>
+            <div class="svg-icon-group">
+            <div class="arrow-mob-up-svg-link">
+                <svg class="arrow-icon" width="5" height="10">
+                <use href="/commandf113-project-portfolio/assets/icons-B064d_8q.svg#icon-arrow-up" />
+                </svg>
+            </div>
+            </div>
+        </div>
+        <p class="answer">
+            In the field of web development, there are various technologies and
+            programming languages. Typically, this includes a combination of
+            frontend (client side) and backend (server side) languages.
+        </p>
+        </li>
+        <li class="question-group">
+        <div class="question-arrow">
+            <p class="question">Do you provide advice or support?</p>
+            <div class="svg-icon-group">
+            <div class="arrow-mob-up-svg-link">
+                <svg class="arrow-icon" width="5" height="10">
+                <use href="/commandf113-project-portfolio/assets/icons-B064d_8q.svg#icon-arrow-up" />
+                </svg>
+            </div>
+            </div>
+        </div>
+        <p class="answer">
+            The terms of project implementation depend to a large extent on a
+            number of factors, such as the scope of the project, its complexity,
+            and the availability of resources. Determining exact deadlines is a
+            difficult task, and it usually occurs during the planning phase of the
+            project.
+        </p>
+        </li>
+        <li class="question-group">
+        <div class="question-arrow">
+            <p class="question">
+            What does the process of developing a software
+            <br class="br-faq" />product look like from idea to implementation?
+            </p>
+            <div class="svg-icon-group">
+            <div class="arrow-mob-up-svg-link">
+                <svg class="arrow-icon" width="5" height="10">
+                <use href="/commandf113-project-portfolio/assets/icons-B064d_8q.svg#icon-arrow-up" />
+                </svg>
+            </div>
+            </div>
+        </div>
+        <p class="answer">
+            Payment through credit and debit cards such as Visa, MasterCard,
+            specialized electronic payment systems such as PayPal, as well as
+            payments in cryptocurrencies such as Bitcoin, Ethereum and others.
+        </p>
+        </li>
+    </ul>
+    </div>
+</section>
+      <section class="covers-section" id="covers">
+    <h2 class="covers-title visually-hidden">My Projects</h2>
+    <div class="covers-content">
+    <audio controls id="audio" loop>
+        <source src="/commandf113-project-portfolio/assets/1-Ddgy1JDG.mp3" type="audio/mp3" />
+        Your browser does not support the audio element <code>audio</code>
+    </audio>
+    <div class="covers-wrapper">
+        <ul class="covers-list">
+        <li class="covers-item">
+            <img
+            class="covers-img"
+            srcset="/commandf113-project-portfolio/assets/project-1@1x-9s7TPiye.webp 1x, /commandf113-project-portfolio/assets/project-1@2x-BKeFx3tD.webp 2x"
+            src="/commandf113-project-portfolio/assets/project-1@1x-9s7TPiye.webp"
+            alt="Transforming your body shape with power pulse"
+            />
+        </li>
+        <li class="covers-item">
+            <img
+            class="covers-img"
+            srcset="/commandf113-project-portfolio/assets/project-2@1x-BczpYCXL.webp 1x, /commandf113-project-portfolio/assets/project-2@2x-q9gw-FdW.webp 2x"
+            src="/commandf113-project-portfolio/assets/project-2@1x-BczpYCXL.webp"
+            alt="Hotel and restaurant Mimino"
+            />
+        </li>
+        <li class="covers-item">
+            <img
+            class="covers-img"
+            srcset="/commandf113-project-portfolio/assets/project-3@1x-0JJhbF-v.webp 1x, /commandf113-project-portfolio/assets/project-3@2x-3TB6b2m6.webp 2x"
+            src="/commandf113-project-portfolio/assets/project-3@1x-0JJhbF-v.webp"
+            alt="Reviving the traditional Ukrainian artistry"
+            />
+        </li>
+        <li class="covers-item">
+            <img
+            class="covers-img"
+            srcset="/commandf113-project-portfolio/assets/project-4@1x-B2CzFrZu.webp 1x, /commandf113-project-portfolio/assets/project-4@2x--i8P_gpg.webp 2x"
+            src="/commandf113-project-portfolio/assets/project-4@1x-B2CzFrZu.webp"
+            alt="Organic vegetables to your diet"
+            />
+        </li>
+        <li class="covers-item">
+            <img
+            class="covers-img"
+            srcset="/commandf113-project-portfolio/assets/project-5@1x-BUgoWBKY.webp 1x, /commandf113-project-portfolio/assets/project-5@2x-DGbnfrKx.webp 2x"
+            src="/commandf113-project-portfolio/assets/project-5@1x-BUgoWBKY.webp"
+            alt="Manage your finances masterfully"
+            />
+        </li>
+        <li class="covers-item">
+            <img
+            class="covers-img"
+            srcset="/commandf113-project-portfolio/assets/project-6@1x-D8DG-4sD.webp 1x, /commandf113-project-portfolio/assets/project-6@2x-CyZXR8QP.webp 2x"
+            src="/commandf113-project-portfolio/assets/project-6@1x-D8DG-4sD.webp"
+            alt="Chego shop"
+            />
+        </li>
+        <li class="covers-item">
+            <img
+            class="covers-img"
+            srcset="/commandf113-project-portfolio/assets/project-7@1x-DT2EG-7E.webp 1x, /commandf113-project-portfolio/assets/project-7@2x-nR9idM_l.webp 2x"
+            src="/commandf113-project-portfolio/assets/project-7@1x-DT2EG-7E.webp"
+            alt="Get body in shape, stay healthy"
+            />
+        </li>
+        <li class="covers-item">
+            <img
+            class="covers-img"
+            srcset="/commandf113-project-portfolio/assets/project-8@1x-BVg5NjHJ.webp 1x, /commandf113-project-portfolio/assets/project-8@2x-DMCxE2n5.webp 2x"
+            src="/commandf113-project-portfolio/assets/project-8@1x-BVg5NjHJ.webp"
+            alt="Fresh harvest box with fruits"
+            />
+        </li>
+        <li class="covers-item">
+            <img
+            class="covers-img"
+            srcset="/commandf113-project-portfolio/assets/project-9@1x-CCxw06Ak.webp 1x, /commandf113-project-portfolio/assets/project-9@2x-Bq56qfZ_.webp 2x"
+            src="/commandf113-project-portfolio/assets/project-9@1x-CCxw06Ak.webp"
+            alt="Discover the joy of Learning English"
+            />
+        </li>
+        <li class="covers-item">
+            <img
+            class="covers-img"
+            srcset="/commandf113-project-portfolio/assets/project-10@1x-CA2iDxPt.webp 1x, /commandf113-project-portfolio/assets/project-10@2x-BQ9I0c_l.webp 2x"
+            src="/commandf113-project-portfolio/assets/project-10@1x-CA2iDxPt.webp"
+            alt="Turn your Business into an online leader"
+            />
+        </li>
+        </ul>
+
+        <ul class="covers-list">
+        <li class="covers-item">
+            <img
+            class="covers-img"
+            srcset="/commandf113-project-portfolio/assets/project-4@1x-B2CzFrZu.webp 1x, /commandf113-project-portfolio/assets/project-4@2x--i8P_gpg.webp 2x"
+            src="/commandf113-project-portfolio/assets/project-4@1x-B2CzFrZu.webp"
+            alt="Organic vegetables to your diet"
+            />
+        </li>
+        <li class="covers-item">
+            <img
+            class="covers-img"
+            srcset="/commandf113-project-portfolio/assets/project-5@1x-BUgoWBKY.webp 1x, /commandf113-project-portfolio/assets/project-5@2x-DGbnfrKx.webp 2x"
+            src="/commandf113-project-portfolio/assets/project-5@1x-BUgoWBKY.webp"
+            alt="Manage your finances masterfully"
+            />
+        </li>
+        <li class="covers-item">
+            <img
+            class="covers-img"
+            srcset="/commandf113-project-portfolio/assets/project-6@1x-D8DG-4sD.webp 1x, /commandf113-project-portfolio/assets/project-6@2x-CyZXR8QP.webp 2x"
+            src="/commandf113-project-portfolio/assets/project-6@1x-D8DG-4sD.webp"
+            alt="Chego shop"
+            />
+        </li>
+        <li class="covers-item">
+            <img
+            class="covers-img"
+            srcset="/commandf113-project-portfolio/assets/project-7@1x-DT2EG-7E.webp 1x, /commandf113-project-portfolio/assets/project-7@2x-nR9idM_l.webp 2x"
+            src="/commandf113-project-portfolio/assets/project-7@1x-DT2EG-7E.webp"
+            alt="Get body in shape, stay healthy"
+            />
+        </li>
+        <li class="covers-item">
+            <img
+            class="covers-img"
+            srcset="/commandf113-project-portfolio/assets/project-8@1x-BVg5NjHJ.webp 1x, /commandf113-project-portfolio/assets/project-8@2x-DMCxE2n5.webp 2x"
+            src="/commandf113-project-portfolio/assets/project-8@1x-BVg5NjHJ.webp"
+            alt="Fresh harvest box with fruits"
+            />
+        </li>
+        <li class="covers-item">
+            <img
+            class="covers-img"
+            srcset="/commandf113-project-portfolio/assets/project-9@1x-CCxw06Ak.webp 1x, /commandf113-project-portfolio/assets/project-9@2x-Bq56qfZ_.webp 2x"
+            src="/commandf113-project-portfolio/assets/project-9@1x-CCxw06Ak.webp"
+            alt="Discover the joy of Learning English"
+            />
+        </li>
+        <li class="covers-item">
+            <img
+            class="covers-img"
+            srcset="/commandf113-project-portfolio/assets/project-10@1x-CA2iDxPt.webp 1x, /commandf113-project-portfolio/assets/project-10@2x-BQ9I0c_l.webp 2x"
+            src="/commandf113-project-portfolio/assets/project-10@1x-CA2iDxPt.webp"
+            alt="Turn your Business into an online leader"
+            />
+        </li>
+        <li class="covers-item">
+            <img
+            class="covers-img"
+            srcset="/commandf113-project-portfolio/assets/project-1@1x-9s7TPiye.webp 1x, /commandf113-project-portfolio/assets/project-1@2x-BKeFx3tD.webp 2x"
+            src="/commandf113-project-portfolio/assets/project-1@1x-9s7TPiye.webp"
+            alt="Transforming your body shape with power pulse"
+            />
+        </li>
+        <li class="covers-item">
+            <img
+            class="covers-img"
+            srcset="/commandf113-project-portfolio/assets/project-2@1x-BczpYCXL.webp 1x, /commandf113-project-portfolio/assets/project-2@2x-q9gw-FdW.webp 2x"
+            src="/commandf113-project-portfolio/assets/project-2@1x-BczpYCXL.webp"
+            alt="Hotel and restaurant Mimino"
+            />
+        </li>
+        <li class="covers-item">
+            <img
+            class="covers-img"
+            srcset="/commandf113-project-portfolio/assets/project-3@1x-0JJhbF-v.webp 1x, /commandf113-project-portfolio/assets/project-3@2x-3TB6b2m6.webp 2x"
+            src="/commandf113-project-portfolio/assets/project-3@1x-0JJhbF-v.webp"
+            alt="Reviving the traditional Ukrainian artistry"
+            />
+        </li>
+        </ul>
+
+        <ul class="covers-list">
+        <li class="covers-item">
+            <img
+            class="covers-img"
+            srcset="/commandf113-project-portfolio/assets/project-7@1x-DT2EG-7E.webp 1x, /commandf113-project-portfolio/assets/project-7@2x-nR9idM_l.webp 2x"
+            src="/commandf113-project-portfolio/assets/project-7@1x-DT2EG-7E.webp"
+            alt="Get body in shape, stay healthy"
+            />
+        </li>
+        <li class="covers-item">
+            <img
+            class="covers-img"
+            srcset="/commandf113-project-portfolio/assets/project-8@1x-BVg5NjHJ.webp 1x, /commandf113-project-portfolio/assets/project-8@2x-DMCxE2n5.webp 2x"
+            src="/commandf113-project-portfolio/assets/project-8@1x-BVg5NjHJ.webp"
+            alt="Fresh harvest box with fruits"
+            />
+        </li>
+        <li class="covers-item">
+            <img
+            class="covers-img"
+            srcset="/commandf113-project-portfolio/assets/project-9@1x-CCxw06Ak.webp 1x, /commandf113-project-portfolio/assets/project-9@2x-Bq56qfZ_.webp 2x"
+            src="/commandf113-project-portfolio/assets/project-9@1x-CCxw06Ak.webp"
+            alt="Discover the joy of Learning English"
+            />
+        </li>
+        <li class="covers-item">
+            <img
+            class="covers-img"
+            srcset="/commandf113-project-portfolio/assets/project-10@1x-CA2iDxPt.webp 1x, /commandf113-project-portfolio/assets/project-10@2x-BQ9I0c_l.webp 2x"
+            src="/commandf113-project-portfolio/assets/project-10@1x-CA2iDxPt.webp"
+            alt="Turn your Business into an online leader"
+            />
+        </li>
+        <li class="covers-item">
+            <img
+            class="covers-img"
+            srcset="/commandf113-project-portfolio/assets/project-1@1x-9s7TPiye.webp 1x, /commandf113-project-portfolio/assets/project-1@2x-BKeFx3tD.webp 2x"
+            src="/commandf113-project-portfolio/assets/project-1@1x-9s7TPiye.webp"
+            alt="Transforming your body shape with power pulse"
+            />
+        </li>
+        <li class="covers-item">
+            <img
+            class="covers-img"
+            srcset="/commandf113-project-portfolio/assets/project-2@1x-BczpYCXL.webp 1x, /commandf113-project-portfolio/assets/project-2@2x-q9gw-FdW.webp 2x"
+            src="/commandf113-project-portfolio/assets/project-2@1x-BczpYCXL.webp"
+            alt="Hotel and restaurant Mimino"
+            />
+        </li>
+        <li class="covers-item">
+            <img
+            class="covers-img"
+            srcset="/commandf113-project-portfolio/assets/project-3@1x-0JJhbF-v.webp 1x, /commandf113-project-portfolio/assets/project-3@2x-3TB6b2m6.webp 2x"
+            src="/commandf113-project-portfolio/assets/project-3@1x-0JJhbF-v.webp"
+            alt="Reviving the traditional Ukrainian artistry"
+            />
+        </li>
+        <li class="covers-item">
+            <img
+            class="covers-img"
+            srcset="/commandf113-project-portfolio/assets/project-4@1x-B2CzFrZu.webp 1x, /commandf113-project-portfolio/assets/project-4@2x--i8P_gpg.webp 2x"
+            src="/commandf113-project-portfolio/assets/project-4@1x-B2CzFrZu.webp"
+            alt="Organic vegetables to your diet"
+            />
+        </li>
+        <li class="covers-item">
+            <img
+            class="covers-img"
+            srcset="/commandf113-project-portfolio/assets/project-5@1x-BUgoWBKY.webp 1x, /commandf113-project-portfolio/assets/project-5@2x-DGbnfrKx.webp 2x"
+            src="/commandf113-project-portfolio/assets/project-5@1x-BUgoWBKY.webp"
+            alt="Manage your finances masterfully"
+            />
+        </li>
+        <li class="covers-item">
+            <img
+            class="covers-img"
+            srcset="/commandf113-project-portfolio/assets/project-6@1x-D8DG-4sD.webp 1x, /commandf113-project-portfolio/assets/project-6@2x-CyZXR8QP.webp 2x"
+            src="/commandf113-project-portfolio/assets/project-6@1x-D8DG-4sD.webp"
+            alt="Chego shop"
+            />
+        </li>
+        </ul>
+
+        <ul class="covers-list">
+        <li class="covers-item">
+            <img
+            class="covers-img"
+            srcset="/commandf113-project-portfolio/assets/project-10@1x-CA2iDxPt.webp 1x, /commandf113-project-portfolio/assets/project-10@2x-BQ9I0c_l.webp 2x"
+            src="/commandf113-project-portfolio/assets/project-10@1x-CA2iDxPt.webp"
+            alt="Turn your Business into an online leader"
+            />
+        </li>
+        <li class="covers-item">
+            <img
+            class="covers-img"
+            srcset="/commandf113-project-portfolio/assets/project-1@1x-9s7TPiye.webp 1x, /commandf113-project-portfolio/assets/project-1@2x-BKeFx3tD.webp 2x"
+            src="/commandf113-project-portfolio/assets/project-1@1x-9s7TPiye.webp"
+            alt="Transforming your body shape with power pulse"
+            />
+        </li>
+        <li class="covers-item">
+            <img
+            class="covers-img"
+            srcset="/commandf113-project-portfolio/assets/project-2@1x-BczpYCXL.webp 1x, /commandf113-project-portfolio/assets/project-2@2x-q9gw-FdW.webp 2x"
+            src="/commandf113-project-portfolio/assets/project-2@1x-BczpYCXL.webp"
+            alt="Hotel and restaurant Mimino"
+            />
+        </li>
+        <li class="covers-item">
+            <img
+            class="covers-img"
+            srcset="/commandf113-project-portfolio/assets/project-3@1x-0JJhbF-v.webp 1x, /commandf113-project-portfolio/assets/project-3@2x-3TB6b2m6.webp 2x"
+            src="/commandf113-project-portfolio/assets/project-3@1x-0JJhbF-v.webp"
+            alt="Reviving the traditional Ukrainian artistry"
+            />
+        </li>
+        <li class="covers-item">
+            <img
+            class="covers-img"
+            srcset="/commandf113-project-portfolio/assets/project-4@1x-B2CzFrZu.webp 1x, /commandf113-project-portfolio/assets/project-4@2x--i8P_gpg.webp 2x"
+            src="/commandf113-project-portfolio/assets/project-4@1x-B2CzFrZu.webp"
+            alt="Organic vegetables to your diet"
+            />
+        </li>
+        <li class="covers-item">
+            <img
+            class="covers-img"
+            srcset="/commandf113-project-portfolio/assets/project-5@1x-BUgoWBKY.webp 1x, /commandf113-project-portfolio/assets/project-5@2x-DGbnfrKx.webp 2x"
+            src="/commandf113-project-portfolio/assets/project-5@1x-BUgoWBKY.webp"
+            alt="Manage your finances masterfully"
+            />
+        </li>
+        <li class="covers-item">
+            <img
+            class="covers-img"
+            srcset="/commandf113-project-portfolio/assets/project-6@1x-D8DG-4sD.webp 1x, /commandf113-project-portfolio/assets/project-6@2x-CyZXR8QP.webp 2x"
+            src="/commandf113-project-portfolio/assets/project-6@1x-D8DG-4sD.webp"
+            alt="Chego shop"
+            />
+        </li>
+        <li class="covers-item">
+            <img
+            class="covers-img"
+            srcset="/commandf113-project-portfolio/assets/project-7@1x-DT2EG-7E.webp 1x, /commandf113-project-portfolio/assets/project-7@2x-nR9idM_l.webp 2x"
+            src="/commandf113-project-portfolio/assets/project-7@1x-DT2EG-7E.webp"
+            alt="Get body in shape, stay healthy"
+            />
+        </li>
+        <li class="covers-item">
+            <img
+            class="covers-img"
+            srcset="/commandf113-project-portfolio/assets/project-8@1x-BVg5NjHJ.webp 1x, /commandf113-project-portfolio/assets/project-8@2x-DMCxE2n5.webp 2x"
+            src="/commandf113-project-portfolio/assets/project-8@1x-BVg5NjHJ.webp"
+            alt="Fresh harvest box with fruits"
+            />
+        </li>
+        <li class="covers-item">
+            <img
+            class="covers-img"
+            srcset="/commandf113-project-portfolio/assets/project-9@1x-CCxw06Ak.webp 1x, /commandf113-project-portfolio/assets/project-9@2x-Bq56qfZ_.webp 2x"
+            src="/commandf113-project-portfolio/assets/project-9@1x-CCxw06Ak.webp"
+            alt="Discover the joy of Learning English"
+            />
+        </li>
+        </ul>
+
+        <ul class="covers-list">
+        <li class="covers-item">
+            <img
+            class="covers-img"
+            srcset="/commandf113-project-portfolio/assets/project-3@1x-0JJhbF-v.webp 1x, /commandf113-project-portfolio/assets/project-3@2x-3TB6b2m6.webp 2x"
+            src="/commandf113-project-portfolio/assets/project-3@1x-0JJhbF-v.webp"
+            alt="Reviving the traditional Ukrainian artistry"
+            />
+        </li>
+        <li class="covers-item">
+            <img
+            class="covers-img"
+            srcset="/commandf113-project-portfolio/assets/project-4@1x-B2CzFrZu.webp 1x, /commandf113-project-portfolio/assets/project-4@2x--i8P_gpg.webp 2x"
+            src="/commandf113-project-portfolio/assets/project-4@1x-B2CzFrZu.webp"
+            alt="Organic vegetables to your diet"
+            />
+        </li>
+        <li class="covers-item">
+            <img
+            class="covers-img"
+            srcset="/commandf113-project-portfolio/assets/project-5@1x-BUgoWBKY.webp 1x, /commandf113-project-portfolio/assets/project-5@2x-DGbnfrKx.webp 2x"
+            src="/commandf113-project-portfolio/assets/project-5@1x-BUgoWBKY.webp"
+            alt="Manage your finances masterfully"
+            />
+        </li>
+        <li class="covers-item">
+            <img
+            class="covers-img"
+            srcset="/commandf113-project-portfolio/assets/project-6@1x-D8DG-4sD.webp 1x, /commandf113-project-portfolio/assets/project-6@2x-CyZXR8QP.webp 2x"
+            src="/commandf113-project-portfolio/assets/project-6@1x-D8DG-4sD.webp"
+            alt="Chego shop"
+            />
+        </li>
+        <li class="covers-item">
+            <img
+            class="covers-img"
+            srcset="/commandf113-project-portfolio/assets/project-7@1x-DT2EG-7E.webp 1x, /commandf113-project-portfolio/assets/project-7@2x-nR9idM_l.webp 2x"
+            src="/commandf113-project-portfolio/assets/project-7@1x-DT2EG-7E.webp"
+            alt="Get body in shape, stay healthy"
+            />
+        </li>
+        <li class="covers-item">
+            <img
+            class="covers-img"
+            srcset="/commandf113-project-portfolio/assets/project-8@1x-BVg5NjHJ.webp 1x, /commandf113-project-portfolio/assets/project-8@2x-DMCxE2n5.webp 2x"
+            src="/commandf113-project-portfolio/assets/project-8@1x-BVg5NjHJ.webp"
+            alt="Fresh harvest box with fruits"
+            />
+        </li>
+        <li class="covers-item">
+            <img
+            class="covers-img"
+            srcset="/commandf113-project-portfolio/assets/project-9@1x-CCxw06Ak.webp 1x, /commandf113-project-portfolio/assets/project-9@2x-Bq56qfZ_.webp 2x"
+            src="/commandf113-project-portfolio/assets/project-9@1x-CCxw06Ak.webp"
+            alt="Discover the joy of Learning English"
+            />
+        </li>
+        <li class="covers-item">
+            <img
+            class="covers-img"
+            srcset="/commandf113-project-portfolio/assets/project-10@1x-CA2iDxPt.webp 1x, /commandf113-project-portfolio/assets/project-10@2x-BQ9I0c_l.webp 2x"
+            src="/commandf113-project-portfolio/assets/project-10@1x-CA2iDxPt.webp"
+            alt="Turn your Business into an online leader"
+            />
+        </li>
+        <li class="covers-item">
+            <img
+            class="covers-img"
+            srcset="/commandf113-project-portfolio/assets/project-1@1x-9s7TPiye.webp 1x, /commandf113-project-portfolio/assets/project-1@2x-BKeFx3tD.webp 2x"
+            src="/commandf113-project-portfolio/assets/project-1@1x-9s7TPiye.webp"
+            alt="Transforming your body shape with power pulse"
+            />
+        </li>
+        <li class="covers-item">
+            <img
+            class="covers-img"
+            srcset="/commandf113-project-portfolio/assets/project-2@1x-BczpYCXL.webp 1x, /commandf113-project-portfolio/assets/project-2@2x-q9gw-FdW.webp 2x"
+            src="/commandf113-project-portfolio/assets/project-2@1x-BczpYCXL.webp"
+            alt="Hotel and restaurant Mimino"
+            />
+        </li>
+        </ul>
+    </div>
+    </div>
+</section>
+      <section class="reviews" id="reviews">
+    <div class="container">
+    <h2 class="reviews-title">Reviews</h2>
+    <div class="swiper reviews-swpr">
+        <ul class="swiper-wrapper reviews-block"></ul>
+        <div class="swiper-button-prev">
+        <svg class="left-svg" width="32" height="32">
+            <use href="/commandf113-project-portfolio/assets/icons-B064d_8q.svg#icon-arrow-left"></use>
+        </svg>
+        </div>
+        <div class="swiper-button-next">
+        <svg class="right-svg" width="32" height="32">
+            <use href="/commandf113-project-portfolio/assets/icons-B064d_8q.svg#icon-arrow-left"></use>
+        </svg>
+        </div>
+    </div>
+    </div>
+</section>
     </main>
 
-    <footer class="footer">
-  <div class="container">
-    <p class="footer-desc">
-      Made with ✨ by
-      <a
-        class="footer-link"
-        href="https://goit.global/ua/"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        GoIT team
-      </a>
-    </p>
-  </div>
-</footer>
+    <footer class="footer work-together section" id="work-together">
+    <div class="container form-section-container">
+    <div class="portrait-title-together-container">
+        <div class="portrait-title-container">
+        <h2 class="visually-hidden">
+            Let’s<span class="red">work</span><br />together
+        </h2>
 
+        <div class="scroll-up-link-wrapper">
+            <div class="title-part-wrapper">
+            <div class="title-part">
+                <picture class="section-portrait">
+                <source
+                    srcset="data:image/jpeg;base64,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 1x, /commandf113-project-portfolio/assets/footer-tab2.jpeg-min-eDkl-wJz.jpg 2x"
+                    media="(min-width: 1440px)"
+                />
+                <source
+                    srcset="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAQEBAQEBAQEBAQGBgUGBggHBwcHCAwJCQkJCQwTDA4MDA4MExEUEA8QFBEeFxUVFx4iHRsdIiolJSo0MjRERFwBBAQEBAQEBAQEBAYGBQYGCAcHBwcIDAkJCQkJDBMMDgwMDgwTERQQDxAUER4XFRUXHiIdGx0iKiUlKjQyNEREXP/CABEIAEYARgMBIgACEQEDEQH/xAAcAAABBQEBAQAAAAAAAAAAAAAHAwQFBggJAQL/2gAIAQEAAAAA37V6zDj9/frvY6vW2HP410+3aLKFSQa5+MYJeHiQeptBJChsg6QQm0/ivJZnNhDSmq0I8WmJ/sBz5k3GDF02daBP+pAjzPiftVLyR7YXjM/OsYOEtIdESv8A/8QAGQEAAwEBAQAAAAAAAAAAAAAAAQIFBAMA/9oACAECEAAAABnw0O4nZKXZ1iV20jyBiQP/xAAaAQACAgMAAAAAAAAAAAAAAAABAgQFAAMG/9oACAEDEAAAAGlT6vQ9tPpI2N0nPa4xL4ArH//EADcQAAICAQMCAwQIBAcAAAAAAAECAwQFAAYREiEHMVEIEyJBECMyQlJhYpEUcYHRFjOCkqGjwf/aAAgBAQABPwB3SNGkkYKqjkk6v7glYtHRHu08us/bP9tTTTTEmWV3P6mJ1kclQxNZ7eQtJDGOAOojqZj5Ko+ZOrPiZi2hsS4rHy3jC/Q4WT5+g92snfWK35g8i8Fa8JMVcmPTHDe4VJGPfpSTspb8jwdQ3r9F/qLMsZHy5PH7HWG3Qll0r5EKkp7JKOykn5H0P0Z+6XlFKM/BH3fj7zf2Gjq/aShRuX5VLJXheUqvm3QOeBrL5zeu/M7HYuWplja4sUAROpKyyv7rsn+rjnWN25nq2Hw1GZGrx0JJeieJjO8jpIePMEMPyI1vepH/AAlqMzsLcp+tgMnvV6y3bqU8qrD1XtrwJ3jkcnNltq35XmgqwLapNISZIV5AeE8kno5Pb0+ja+Ua7UatM/M0HA5PmyfI6mkMssspJ5dix/ro6t11tVbdV+yzQyRk+nUpHOtrbMjq3bN6DmKaw7MpXsfi8z/7zqGpIMPBTlj9z7pegBe3AGt5bUjFxysqMbHBXqPBGvBrZlXGWsxn2bqsqv8ACRgfISnrcn156RojWLvyY6d5o2ILIVP7g650Tq6LjUry49kW8a0wql+6Ccofdlvy6uOdYTHHP2coJspnMdLj2hgDVLrVC5KfE4jX4OzDzK8H01urDb8xRpQQeIt+1i7LzIUs1aosl1geRF99BEh+IrrIbP3nDtaaYZ2exuZFs37FZm96IMdEhCF1kYussj8CPXhpt25BsiKfF7uyVTNXMrFFFNBKJILHIQnrrzrIjpGhZ+VAOpOCxKjgEngeg0dE6J11asW6L5yfExylMhFjEyBh5H1leWZ42dB+h0+Mj1GshHDapzwz1o7PMfwpKoZCfMHg+ms3mG23iJcft0ZVEmklS5ZhruEmkc/FwSoEnfsjjq4HZdeFOIjxuzMfZelDFauNLMZBEqytExAHUwHJ56dHR0qs54UEnueP5aubx2XQiszXt5YGFK/+dzka5ZPyKq5bnWa9pTwsxomjxdy/mrYBESVarQwvJ91TLY6OkE/eCnW7PEzdO593x7+hvS43JxcJTFR2QU4o+whjJ7le56uftEnW1/aWvzwDG7spwR2DH0C/XXoR29Xj8lP8u2s7uSDcc22cNt+W1kshzM0cNQvIzPLH9ooOyqCwHoNYqjJi8LhsXM4aWnQrV5GB5BeKMKePUcjRP0e094hZZM/e8NsPPNWx9JI2yZj5Q25p1EiRH1hRCO3zbU0Qh7iNSOO/bz/sddTI/KufyOhMftc/BJ3I9H1N56xWXy2CuxZLC5K1Quxd47FWVoZV/kyEHWA9qTxFxcaQZuHG52MfftQmGf8A3wFP3YHXh57Ru1d6ZCHCZqgdv5Kc9FZ5ZxNTnc+Se8IQxOfl1aweKa9bsRSDpEafF1DjhufLXtT+ENrc1CPf226jz5PGw9GRrRDlp6qdxIB83i1blY/ER2PYn8XHzP6h/wA655/bUZ80Pkw0vxDg+Y7aPaIH5ltKvOsZh8lnMpSw2IpS28hbnEEFeFep5HPkANeF+2c1s3Ye3cDuLKnI5qvUVLdo9+/3Yg3mwiUhAx+jxY9lbaW/57WZ29b/AMPZqdg8xii66c7/AI3i5HQ/5prxH8Jtw+GN+WjnL2OssjcdVN5WH/YiaXUZ+uT9WuC7RxD14H9Trwu9mrc/iUguxZ/F0MchjaV297LOA/4YwoB14X+B2x/CeF5sLVa1mJV4nytzh7BH4I/lGn0f/8QAJREAAgEDAwMFAQAAAAAAAAAAAQIDABEhEBIxBEFRExQgInGR/9oACAECAQE/ADUsojsMXPmvduGywI8EVHJuUMP5QzXaur2mWBDf7Xz+VMisygOAygZN+KgXbEovfnNXto0PqqQRnteuoSVZlRo247cGo12oi+FGgttxQOhQUF+X/8QAIhEAAgIBBAMAAwAAAAAAAAAAAQIAAxEEECFREhMxFFJh/9oACAEDAQE/AAJRQbcnnxHUOhr8cBSD2DmW1FGKnbE0Cv8Aj6q1SpCeOQfvPE0zMqO5QlWb4MckzVMTqLMjHzjqY2S/0uGBPRA6miupNLWCxSP6cEGWv7LbH/ZiZmHPkcwiDqB4TsYINv/Z 1x, /commandf113-project-portfolio/assets/footer-tab2.jpeg-min-eDkl-wJz.jpg 2x"
+                    media="(min-width: 768px)"
+                />
+                <source
+                    srcset="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAQEBAQEBAQEBAQGBgUGBggHBwcHCAwJCQkJCQwTDA4MDA4MExEUEA8QFBEeFxUVFx4iHRsdIiolJSo0MjRERFwBBAQEBAQEBAQEBAYGBQYGCAcHBwcIDAkJCQkJDBMMDgwMDgwTERQQDxAUER4XFRUXHiIdGx0iKiUlKjQyNEREXP/CABEIACwALAMBIgACEQEDEQH/xAAcAAABBAMBAAAAAAAAAAAAAAAHBQYICQEDBAL/2gAIAQEAAAAAm2zARk3FgeN0ZjKQq+q8A5j7LHqbwPABRmNornA23Q8LZl+mtA9TWsg//8QAFwEBAQEBAAAAAAAAAAAAAAAABQIAA//aAAgBAhAAAACCk6NQ76f/xAAXAQEBAQEAAAAAAAAAAAAAAAAFAAMC/9oACAEDEAAAANWRpkbC6//EADIQAAICAQMDAwICCgMAAAAAAAECAwQFAAYRBxIhMUFRExQIFRAXM0JSU2FxgZFigrH/2gAIAQEAAT8AzWZlaV6tWQoiHtd1Pljq3PHBDNasyhIoo2klkc+FRB3MxPwBp+tONy+Qt0NsRRywV4pJHuWO5RIEHrCvuSTwAdL1X/Jmrpuqp3VpTx95UhdCnK93LxP6j544YeynWOy08KQW8dd7oJY1kjaNu6KSNx3Kw9irDyDrE5OHIUY7A4RgSjrz6MNOSSWJ8k8nW6MeuW27nMc4JWxSlUgepAXnjXT7p/Ww9Hh6MVgMhEsoX0mHofHuB8a6l4GCeSaMZasIgAVT6igRkHgjj+InW28S+E21t/FNMZvtsdXjEvHAcBB5HyPg6isywqVRiBzzonV6tHeqWacjELMhUkH/AF/cfI99WNibcyGHkx2SxWPsZEV5oPzQQRxzmUkoZPqRcMPPll58ka3TtbbNSKKg2NEWTbLvPWjjm71s/VkCuZie1xEO0CGML48n31QxNTE/fpUp1aptXJLc0dSMRxfVZVQkcBeSQgLNwO5uTo+ut49StkbDatFunOpVs2E74qyRyTzmPnjvKRK3anwW1uL8VWz6f3Nba+Dv5O2AwilthalUv7H1aQr/AIU62x1/3ptu5dkvzR5jG3rk92WCcdrRS2pDNKYGXjsDMSezyutp7821vrfe2ZEt0cf9vYfI23yDwVQ8olR1jQvwZZSF7F1KkqEd8bKD5HII5H6Ou2OzWN6obzj3Grm1LfllrufR6Z8V+z/gIgF1IwLHt13948/vf+6ZOB/2I/1ram+937Ju1723c5ariN+WrGQtVmHuksRPa666XS/rD2Ngt4WKEmOfIxFzWfngFGKFkJ9Y2I5Q/Gup/SvZnU/FtDuWi/3NKJ2qXqriK1B7kK/BBX+jAjW78RWwW48riqbyPBXndEMpBcgfPaANL6H/AAdS/tD/AHOvwy9Edjb+hn3DumG3cNCSNkpGULUlL/zQB3HUMMVeKKCCJI4Y0VI40UKqKo4CqB4AGv/EAB0RAQACAgMBAQAAAAAAAAAAAAECAwAREBIhUQT/2gAIAQIBAT8AnsFPmT/TbGUZ7dLkZOjeMe4xTxNZdRfXOqFZLqeEj5wuw4Qz/8QAIREBAQABBAAHAAAAAAAAAAAAAQIAAwQRIRATIjFRYXH/2gAIAQMBAT8AgGpHoUHI2ejc3AHMnvlycvHzhfl0WVxUon6Ztt5t9TT19XVYLfUy9c19eBPbhgvGf//Z 1x, data:image/jpeg;base64,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 2x"
+                    media="(max-width: 767px)"
+                />
+
+                <img
+                    src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAQEBAQEBAQEBAQGBgUGBggHBwcHCAwJCQkJCQwTDA4MDA4MExEUEA8QFBEeFxUVFx4iHRsdIiolJSo0MjRERFwBBAQEBAQEBAQEBAYGBQYGCAcHBwcIDAkJCQkJDBMMDgwMDgwTERQQDxAUER4XFRUXHiIdGx0iKiUlKjQyNEREXP/CABEIAEYARgMBIgACEQEDEQH/xAAcAAABBQEBAQAAAAAAAAAAAAAHAwQFBggJAQL/2gAIAQEAAAAA37V6zDj9/frvY6vW2HP410+3aLKFSQa5+MYJeHiQeptBJChsg6QQm0/ivJZnNhDSmq0I8WmJ/sBz5k3GDF02daBP+pAjzPiftVLyR7YXjM/OsYOEtIdESv8A/8QAGQEAAwEBAQAAAAAAAAAAAAAAAQIFBAMA/9oACAECEAAAABnw0O4nZKXZ1iV20jyBiQP/xAAaAQACAgMAAAAAAAAAAAAAAAABAgQFAAMG/9oACAEDEAAAAGlT6vQ9tPpI2N0nPa4xL4ArH//EADcQAAICAQMCAwQIBAcAAAAAAAECAwQFAAYREiEHMVEIEyJBECMyQlJhYpEUcYHRFjOCkqGjwf/aAAgBAQABPwB3SNGkkYKqjkk6v7glYtHRHu08us/bP9tTTTTEmWV3P6mJ1kclQxNZ7eQtJDGOAOojqZj5Ko+ZOrPiZi2hsS4rHy3jC/Q4WT5+g92snfWK35g8i8Fa8JMVcmPTHDe4VJGPfpSTspb8jwdQ3r9F/qLMsZHy5PH7HWG3Qll0r5EKkp7JKOykn5H0P0Z+6XlFKM/BH3fj7zf2Gjq/aShRuX5VLJXheUqvm3QOeBrL5zeu/M7HYuWplja4sUAROpKyyv7rsn+rjnWN25nq2Hw1GZGrx0JJeieJjO8jpIePMEMPyI1vepH/AAlqMzsLcp+tgMnvV6y3bqU8qrD1XtrwJ3jkcnNltq35XmgqwLapNISZIV5AeE8kno5Pb0+ja+Ua7UatM/M0HA5PmyfI6mkMssspJ5dix/ro6t11tVbdV+yzQyRk+nUpHOtrbMjq3bN6DmKaw7MpXsfi8z/7zqGpIMPBTlj9z7pegBe3AGt5bUjFxysqMbHBXqPBGvBrZlXGWsxn2bqsqv8ACRgfISnrcn156RojWLvyY6d5o2ILIVP7g650Tq6LjUry49kW8a0wql+6Ccofdlvy6uOdYTHHP2coJspnMdLj2hgDVLrVC5KfE4jX4OzDzK8H01urDb8xRpQQeIt+1i7LzIUs1aosl1geRF99BEh+IrrIbP3nDtaaYZ2exuZFs37FZm96IMdEhCF1kYussj8CPXhpt25BsiKfF7uyVTNXMrFFFNBKJILHIQnrrzrIjpGhZ+VAOpOCxKjgEngeg0dE6J11asW6L5yfExylMhFjEyBh5H1leWZ42dB+h0+Mj1GshHDapzwz1o7PMfwpKoZCfMHg+ms3mG23iJcft0ZVEmklS5ZhruEmkc/FwSoEnfsjjq4HZdeFOIjxuzMfZelDFauNLMZBEqytExAHUwHJ56dHR0qs54UEnueP5aubx2XQiszXt5YGFK/+dzka5ZPyKq5bnWa9pTwsxomjxdy/mrYBESVarQwvJ91TLY6OkE/eCnW7PEzdO593x7+hvS43JxcJTFR2QU4o+whjJ7le56uftEnW1/aWvzwDG7spwR2DH0C/XXoR29Xj8lP8u2s7uSDcc22cNt+W1kshzM0cNQvIzPLH9ooOyqCwHoNYqjJi8LhsXM4aWnQrV5GB5BeKMKePUcjRP0e094hZZM/e8NsPPNWx9JI2yZj5Q25p1EiRH1hRCO3zbU0Qh7iNSOO/bz/sddTI/KufyOhMftc/BJ3I9H1N56xWXy2CuxZLC5K1Quxd47FWVoZV/kyEHWA9qTxFxcaQZuHG52MfftQmGf8A3wFP3YHXh57Ru1d6ZCHCZqgdv5Kc9FZ5ZxNTnc+Se8IQxOfl1aweKa9bsRSDpEafF1DjhufLXtT+ENrc1CPf226jz5PGw9GRrRDlp6qdxIB83i1blY/ER2PYn8XHzP6h/wA655/bUZ80Pkw0vxDg+Y7aPaIH5ltKvOsZh8lnMpSw2IpS28hbnEEFeFep5HPkANeF+2c1s3Ye3cDuLKnI5qvUVLdo9+/3Yg3mwiUhAx+jxY9lbaW/57WZ29b/AMPZqdg8xii66c7/AI3i5HQ/5prxH8Jtw+GN+WjnL2OssjcdVN5WH/YiaXUZ+uT9WuC7RxD14H9Trwu9mrc/iUguxZ/F0MchjaV297LOA/4YwoB14X+B2x/CeF5sLVa1mJV4nytzh7BH4I/lGn0f/8QAJREAAgEDAwMFAQAAAAAAAAAAAQIDABEhEBIxBEFRExQgInGR/9oACAECAQE/ADUsojsMXPmvduGywI8EVHJuUMP5QzXaur2mWBDf7Xz+VMisygOAygZN+KgXbEovfnNXto0PqqQRnteuoSVZlRo247cGo12oi+FGgttxQOhQUF+X/8QAIhEAAgIBBAMAAwAAAAAAAAAAAQIAAxEEECFREhMxFFJh/9oACAEDAQE/AAJRQbcnnxHUOhr8cBSD2DmW1FGKnbE0Cv8Aj6q1SpCeOQfvPE0zMqO5QlWb4MckzVMTqLMjHzjqY2S/0uGBPRA6miupNLWCxSP6cEGWv7LbH/ZiZmHPkcwiDqB4TsYINv/Z"
+                    alt="Let`s work together"
+                    class="section-portrait__img"
+                />
+                </picture>
+                <span class="form-title">Let’s</span>
+            </div>
+            <div class="title-part">
+                <span class="form-title red">work</span>
+            </div>
+            <div class="title-part">
+                <span class="form-title">together</span>
+            </div>
+            </div>
+            <a class="footer-scroll-up-link" href="#hero"
+            >scroll up
+            <svg class="footer-svg" width="24" height="24">
+                <use href="/commandf113-project-portfolio/assets/icons-B064d_8q.svg#icon-arrow-left"></use>
+            </svg>
+            </a>
+        </div>
+        </div>
+    </div>
+
+    <form class="form js-form">
+        <div class="input-message-container">
+        <div class="inputs-container">
+            <div class="email-input-container">
+            <input
+                class="form-input email js-email"
+                type="email"
+                name="user-email"
+                placeholder="clients@gmail.com"
+                pattern="^\w+(\.\w+)?@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$"
+            />
+
+            <p class="success-message fade-out js-success-message">Success</p>
+            <p class="error-message fade-out js-error-message">
+                Invalid email, please try again
+            </p>
+            </div>
+
+            <input
+            class="form-input comment js-comment"
+            type="text"
+            name="user-comment"
+            placeholder="comments"
+            />
+        </div>
+        </div>
+
+        <button class="form-btn" type="submit" aria-label="Send form">
+        Send
+        </button>
+    </form>
+
+    <address class="address">
+        <ul class="address-list">
+        <li class="address-item">
+            <a class="address-link" href="mailto:lloydjefferson@gmail.com"
+            >lloydjefferson@gmail.com</a
+            >
+        </li>
+        <li class="address-item">
+            <a class="address-link" href="tel:+3801111111111"
+            >+380 11 1111 11 11</a
+            >
+        </li>
+        </ul>
+    </address>
+    </div>
+</footer>
+    <div class="modal-backdrop js-modal-backdrop">
+    <div class="modal-window js-modal-window"></div>
+</div>
 
   </body>
 </html>
