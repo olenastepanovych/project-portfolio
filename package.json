@@ -1,11 +1,11 @@
 {
-  "name": "commandf113-project-portfolio",
+  "name": "project-portfolio",
   "private": true,
   "version": "1.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build --base=/commandf113-project-portfolio/",
+    "build": "vite build --base=/project-portfolio/",
     "preview": "vite preview"
   },
   "devDependencies": {
